@@ -1,0 +1,10 @@
+<h1><%= @restaurant.name%></h1>
+<%= link_to "back to the list", restaurants_path%>
+
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= review.content %> </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new review", new_restaurant_review_path(@restaurant)%>
